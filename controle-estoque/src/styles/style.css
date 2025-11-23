@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+*{
+    font-family: "Inter", sans-serif;
+}
+body{
+    min-width: 200px;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button.active{
+    background-color: #cc7e18;
+    transition: 500ms ease-in-out;
+}
+.button{
+    background-color: #f1b15c;
+}
+#icon-open, #icon-close{
+    color: #ffc67b;
+}
+nav .nav, .nav-mobile{
+    background-color: #82003e;
+}
+footer div{
+    background-color: #82003e;
+    color: #ffc67b;
+}
+
+/* CSS Stock Page / Orders */
+.done{
+    background-color: rgb(74, 2, 2);
+    text-decoration: line-through;
+    font-style: italic;
+}
+.button{
+    background-color: #db9335;
+    color: black;
+}
+
+/* CSS Orders Panel */
+.done{
+    opacity: 0.6;
+    text-decoration: line-through;
+    font-style: italic;
+}

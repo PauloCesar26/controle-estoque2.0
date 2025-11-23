@@ -1,0 +1,204 @@
+<nav>
+  <div class="w-full nav pl-4 pr-4 pb-2 pt-2 flex justify-between items-center">
+    <div class="">
+      <img src="/src/img/Logo_principal.png" alt="" class="w-17 h-17 object-center object-cover">
+    </div>
+    <div class="space-x-2 max-sm:hidden flex items-center">
+      <a href="/" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store-icon lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
+        Home
+      </a>
+      <a href="/Estoque" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        Estoque
+      </a>
+      <a href="/Pedidos" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
+        Pedido
+      </a>
+      <a data-link href="/Painel-pedidos" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-icon lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+        Painel
+      </a>
+      <button type="button" class="btn-logout text-white pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pointer-events-none lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+      </button>
+    </div>
+    
+    <div class="btn-menu-mobile sm:hidden flex items-center">
+      <button type="button" class="btn-logout text-white pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pointer-events-none lucide lucide-log-out-icon lucide-log-out"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+      </button>
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x hidden"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>    
+    </div>
+  </div>
+
+  <div class="menu-mobile nav-mobile w-full p-5 sm:hidden hidden">
+    <div class="w-full flex flex-col space-y-3">
+      <a href="/" class="active button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer text-center flex justify-center items-center gap-2 text-[1rem]" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-store-icon lucide-store"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg>
+        Home
+      </a>
+      <a href="/Estoque" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer text-center flex justify-center items-center gap-2 text-[1rem]" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        Estoque
+      </a>
+      <a href="/Pedidos" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer text-center flex justify-center items-center gap-2 text-[1rem]" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag-icon lucide-shopping-bag"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg>
+        Pedido
+      </a>
+      <a href="/Painel-pedidos" class="button bg-zinc-200 pt-2 pb-2 pl-4 pr-4 rounded-[10px] cursor-pointer text-center flex justify-center items-center gap-2 text-[1rem]" data-link>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-icon lucide-monitor"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+        Painel
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-1 w-full h-full bg-red-950/90">
+    <div class="max-w-[650px] min-w-[200px] sm:w-300 text-white rounded-[15px] ml-1 mr-1 md:ml-auto md:mr-auto pt-5 pb-5 pl-3 pr-3 space-y-3 flex flex-col items-center mt-5 mb-5">
+        <h1 class="border-b-1 border-white pb-2 pl-2 pr-2 text-center font-bold text-[1.2rem]">Estoque do dia <span id="current-date"></span></h1>
+
+        <form id="form" class="pl-3 pr-3 w-full">
+            <div class="flex flex-col">
+                <div class="border-b-2 border-zinc-100 flex flex-col pb-4 pt-1">
+                    <h1 class="mb-3 font-bold text-[1.1rem]">Estoque de massas</h1>
+                    <div id="massas">
+                        
+                    </div>
+                    <button type="button" id="add-massa" class="button w-40 pt-2 pb-2 pl-3 pr-3 rounded-[10px] bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white cursor-pointer transition duration-[0.3s]">
+                        Adicionar massa
+                    </button>
+                </div>
+
+                <div class="border-b-2 border-zinc-100 flex flex-col pb-4 pt-3">
+                    <h1 class="mb-3 font-bold text-[1.1rem]">Estoque de recheios</h1>
+                    <div id="recheios">
+                        
+                    </div>
+                    <button type="button" id="add-recheio" class="button w-40 pt-2 pb-2 pl-3 pr-3 rounded-[10px] bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white cursor-pointer transition duration-[0.3s]">
+                        Adicionar recheio
+                    </button>
+                </div>
+
+                <div class="border-b-2 border-zinc-100 flex flex-col pb-4 pt-3">
+                    <h1 class="mb-3 font-bold text-[1.1rem]">Estoque de bebidas</h1>
+                    <div id="bebidas">
+                        
+                    </div>
+                    <button type="button" id="add-bebida" class="button w-40 pt-2 pb-2 pl-3 pr-3 rounded-[10px] bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white cursor-pointer transition duration-[0.3s]">
+                        Adicionar bebida
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col space-y-2 pt-3">
+                <button type="submit" class="button font-bold pt-3 pb-3 bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white rounded-[10px] cursor-pointer transition duration-[0.3s]">
+                    Enviar
+                </button>
+                <button id="limpar" class="button font-bold pt-3 pb-3 bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white rounded-[10px] cursor-pointer transition duration-[0.3s]">
+                    Limpar estoque
+                </button>
+                <button id="voltar" class="button font-bold pt-3 pb-3 bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white rounded-[10px] cursor-pointer transition duration-[0.3s]">
+                    Voltar para estoque atual
+                </button>
+            </div>
+        </form>
+
+        <button id="update-estoque" class="button hidden font-bold w-50 pt-3 pb-3 bg-zinc-950 hover:bg-zinc-800 ease-in-out text-white rounded-[10px] cursor-pointer transition duration-[0.3s]">
+            Atualizar estoque
+        </button>
+    </div>
+
+    <div id="estoque" class="m-1 flex flex-col items-center border-1 border-zinc-900 bg-black mb-10">
+        <h1 class="text-center text-white">Estoque inicial</h1>
+        <div class="p-1 w-full bg-zinc-300">
+            <div class="border-2 border-zinc-900">
+                <h1 class="text-center border-b-1 border-zinc-900 p-1 font-bold">Massa</h1>
+                <div class="grid grid-cols-2 w-full">
+                    <p class="border-b-1 pl-2">Sabor</p>
+                    <p class="border-b-1">Quantidade</p>
+                </div>
+                <div class="grid grid-cols-2 w-full" id="exibir-massa">
+
+                </div>
+            </div>
+
+            <div class="mt-5 border-2 border-zinc-900">
+                <h1 class="text-center border-b-1 border-zinc-900 p-1 font-bold">Recheio</h1>
+                <div class="grid grid-cols-2 w-full">
+                    <p class="border-b-1 pl-2">Sabor</p>
+                    <p class="border-b-1">Quantidade</p>
+                </div>
+                <div class="grid grid-cols-2 w-full" id="exibir-recheio">
+
+                </div>
+            </div>
+
+            <div class="mt-5 border-2 border-zinc-900">
+                <h1 class="text-center border-b-1 border-zinc-900 p-1 font-bold">Bebida</h1>
+                <div class="grid grid-cols-2 w-full">
+                    <p class="border-b-1 pl-2">Sabor</p>
+                    <p class="border-b-1">Quantidade</p>
+                </div>
+                <div class="grid grid-cols-2 w-full" id="exibir-bebida">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="current-estoque" class="m-1 flex flex-col items-center border-1 border-zinc-900 bg-black mb-10">
+        <h1 class="text-center text-white">Estoque atual</h1>
+        <div class="p-1 w-full bg-zinc-300">
+            <div class="border-2 border-zinc-900">
+                <h1 class="text-center border-b-1 border-zinc-900 p-1 font-bold">Massa</h1>
+                <div class="grid grid-cols-2 w-full">
+                    <p class="border-b-1 pl-2">Sabor</p>
+                    <p class="border-b-1">Quantidade</p>
+                </div>
+                <div class="grid grid-cols-2 w-full" id="display-current-massa">
+
+                </div>
+            </div>
+
+            <div class="mt-5 border-2 border-zinc-900">
+                <h1 class="text-center border-b-1 border-zinc-900 p-1 font-bold">Recheio</h1>
+                <div class="grid grid-cols-2 w-full">
+                    <p class="border-b-1 pl-2">Sabor</p>
+                    <p class="border-b-1">Quantidade</p>
+                </div>
+                <div class="grid grid-cols-2 w-full" id="display-current-recheio">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="hidden">
+        <div class="
+            fixed 
+            top-0 
+            left-0
+            w-full
+            h-full
+            bg-red-900
+            opacity-90
+            z-50
+            flex
+            items-center
+            justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle-icon lucide-loader-circle animate-spin text-white"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="pl-3 pr-3">
+        <div class="w-full p-2 text-center flex flex-col space-y-1">
+            <span class="font-bold opacity-90">&copy; Paulo Cesar 2025</span>
+            <span class="text-[13px] opacity-80">Jojoca Doces</span>
+        </div>
+    </div>
+</footer>

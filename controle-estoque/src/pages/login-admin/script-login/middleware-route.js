@@ -1,0 +1,10 @@
+import { auth } from "../../../app";
+import { onAuthStateChanged } from "firebase/auth";
+
+export const checkAuth = async () => {
+    return new Promise(resolve => {
+        onAuthStateChanged(auth, (user) => {
+            resolve(user);
+        })
+    });   
+};
