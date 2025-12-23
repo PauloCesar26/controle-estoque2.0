@@ -1,7 +1,6 @@
 import { ref, onValue, set } from "firebase/database";
 import { showToastify } from "../../../components/toastify.js";
 import { db } from "../../../app.js";
-import { handleSelect } from "../../pedidoPage/feature-display/handleSelect.js";
 
 export function loadCurrentEstoque(displayCurrentMassa, displayCurrentRecheio){
     const massaEstoqueRef = ref(db, "massa");

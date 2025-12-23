@@ -89,7 +89,6 @@ export function pedido(){
             const dbOrder = ref(db, "orders");
             const newRefOrder = push(dbOrder);
             set(newRefOrder, order);
-            handleSelect();
             form.reset();
         });
         
