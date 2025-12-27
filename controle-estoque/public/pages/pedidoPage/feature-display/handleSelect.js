@@ -1,5 +1,5 @@
 import { ref, onValue } from "firebase/database";
-import { db } from "../../../app.js";
+import { db } from "../../../../src/app.js";
 
 export function handleSelect(){
     const dbMassa = ref(db, "dbCurrentMassa");

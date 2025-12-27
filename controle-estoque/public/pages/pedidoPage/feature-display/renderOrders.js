@@ -1,6 +1,6 @@
 import { ref, remove, update } from "firebase/database";
-import { loadingOverlay } from "../../../components/loadingOverlay.js";
-import { db } from "../../../app.js";
+import { loadingOverlay } from "../../../../src/components/loadingOverlay.js";
+import { db } from "../../../../src/app.js";
 
 export const renderOrders = (snapshot) => {
     const order = document.getElementById("exibir-order");

@@ -1,10 +1,10 @@
-import { db } from "../../app.js";
+import { db } from "../../../src/app.js";
 import { ref, onValue, push, set, off } from "firebase/database";
 import { cleanOrderDb } from "./feature-db/cleanOrderDb.js";
 import { handleSelect } from "./feature-display/handleSelect.js";
 import { renderOrders } from "./feature-display/renderOrders.js";
-import { showToastify } from "../../components/toastify.js";
-import { loadingOverlay } from "../../components/loadingOverlay.js";
+import { showToastify } from "../../../src/components/toastify.js";
+import { loadingOverlay } from "../../../src/components/loadingOverlay.js";
 import { updateUI } from "../estoquePage/feature-estoque/updateUI.js";
 
 export function pedido(){

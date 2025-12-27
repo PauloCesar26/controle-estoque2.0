@@ -3,9 +3,9 @@ import {
     onAuthStateChanged,
     signOut
 } from "firebase/auth";
-import { render } from "../../../app.js";
-import { auth } from "../../../app.js";
-import { showToastify } from "../../../components/toastify.js";
+import { render } from "../../../../src/app.js";
+import { auth } from "../../../../src/app.js";
+import { showToastify } from "../../../../src/components/toastify.js";
 
 function validationEmail(email){
     const regexEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;

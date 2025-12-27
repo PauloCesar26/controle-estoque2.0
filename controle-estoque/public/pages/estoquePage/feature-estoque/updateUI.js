@@ -1,8 +1,8 @@
 import { ref, onValue } from "firebase/database";
-import { db } from "../../../app.js";
-import { loadingOverlay } from "../../../components/loadingOverlay";
+import { db } from "../../../../src/app.js";
+import { loadingOverlay } from "../../../../src/components/loadingOverlay.js";
 import { loadCurrentEstoque } from "./loadCurrentEstoque.js";
-import { showToastify } from "../../../components/toastify.js";
+import { showToastify } from "../../../../src/components/toastify.js";
 
 export function updateUI(){    
     const displayMassa = document.getElementById("exibir-massa");

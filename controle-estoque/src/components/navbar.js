@@ -1,4 +1,4 @@
-import { logout } from "../pages/login-admin/script-login/auth-firebase";
+import { logout } from "../../public/pages/login-admin/script-login/auth-firebase";
 import { render } from "../app";
 
 export function makeNavbarWorks(){
