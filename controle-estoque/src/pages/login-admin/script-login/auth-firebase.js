@@ -16,9 +16,6 @@ export const loginEmailAndPassword = async (
     email,
     password
 ) => {
-    console.log(email.value);
-    console.log(password.value);
-
     const loginEmail = email.value;
     const loginPassword = password.value;
     const checkEmail = validationEmail(loginEmail);
@@ -29,9 +26,8 @@ export const loginEmailAndPassword = async (
             const user = userInfo.user;
             
             console.log("Login success");
-            console.log(`Email: ${user.email}`);
-    
             console.log(`Welcome to System Jojoca Doces ${user.email}`);
+
             history.pushState({}, "", "/Home");
             render("/Home");
         }
