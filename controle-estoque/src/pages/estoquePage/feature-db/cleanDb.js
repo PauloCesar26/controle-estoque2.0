@@ -1,7 +1,7 @@
 import { ref, remove } from "firebase/database";
-import { showToastify } from "../../../components/toastify.js";
-import { loadingOverlay } from "../../../components/loadingOverlay.js";
-import { db } from "../../../app.js";
+import { showToastify } from "../../../../src/components/toastify.js";
+import { loadingOverlay } from "../../../../src/components/loadingOverlay.js";
+import { db } from "../../../../src/app.js";
 
 export async function cleanDB(){
     loadingOverlay.show();

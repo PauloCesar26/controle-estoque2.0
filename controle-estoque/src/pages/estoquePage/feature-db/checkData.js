@@ -1,7 +1,7 @@
 import { ref, get } from "firebase/database";
-import { showToastify } from "../../../components/toastify.js";
+import { showToastify } from "../../../../src/components/toastify.js";
 import { updateUI } from "../feature-estoque/updateUI.js";
-import { db } from "../../../app.js";
+import { db } from "../../../../src/app.js";
 
 export async function checkData(){
     const massaRef = ref(db, "massa");

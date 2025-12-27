@@ -4,8 +4,6 @@ import { db } from "../../app.js";
 import { ref, push, set } from "firebase/database";
 import { checkData } from "./feature-db/checkData.js";
 import { cleanDB } from "./feature-db/cleanDb.js";
-import { logout } from "../login-admin/script-login/auth-firebase.js";
-import { makeNavbarWorks } from "../../components/navbar.js";
 
 export function estoque(){
     const form = document.getElementById("form");

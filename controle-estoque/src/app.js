@@ -1,12 +1,12 @@
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { loginAdmin } from "../public/pages/login-admin/script-login/event-login.js";
-import { checkAuth } from "../public/pages/login-admin/script-login/middleware-route.js";
-import { estoque } from "../public/pages/estoquePage/scriptStock.js";
-import { pedido } from "../public/pages/pedidoPage/scriptOrders.js";
+import { loginAdmin } from "./pages/login-admin/script-login/event-login.js";
+import { checkAuth } from "./pages/login-admin/script-login/middleware-route.js";
+import { estoque } from "./pages/estoquePage/scriptStock.js";
+import { pedido } from "./pages/pedidoPage/scriptOrders.js";
 import { makeNavbarWorks } from "./components/navbar.js";
-import { ordersPanel } from "../public/pages/ordersPanel/scriptOrdersPanel.mjs";
+import { ordersPanel } from "./pages/ordersPanel/scriptOrdersPanel.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBeZQMgq6T2CDdV0p7oLmsGYgw_lyB-BFM",

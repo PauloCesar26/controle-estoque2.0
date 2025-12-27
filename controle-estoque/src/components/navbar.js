@@ -1,5 +1,5 @@
-import { logout } from "../../public/pages/login-admin/script-login/auth-firebase";
-import { render } from "../app";
+import { logout } from "../pages/login-admin/script-login/auth-firebase";
+import { render } from "../app.js";
 
 export function makeNavbarWorks(){
     const menuMobile = document.querySelector(".menu-mobile");
