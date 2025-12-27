@@ -6,8 +6,10 @@ export function loginAdmin(){
 
     const btnLogin = document.getElementById("btn-login");
 
-    btnLogin.addEventListener("submit", (e) => {
-        e.preventDefault();
-        loginEmailAndPassword(adminEmail, adminPassword);
+    window.addEventListener("DOMContentLoaded", () => {
+        btnLogin.addEventListener("submit", (e) => {
+            e.preventDefault();
+            loginEmailAndPassword(adminEmail, adminPassword);
+        });
     });
 }
