@@ -1,12 +1,12 @@
 <main class="min-h-screen">
     <!-- Main content -->
     <div class="min-h-screen flex items-center justify-center bg-gradient-to-l from-rose-900 from-40% to-rose-950 p-4 animate-fade-in">
-        <article class="w-full max-w-md bg-white rounded-lg shadow-2xl animate-slide-up border border-gray-200/50 backdrop-blur-sm">
+        <article class="overflow-hidden w-full max-w-md bg-white rounded-lg shadow-2xl animate-slide-up border border-gray-200/50 backdrop-blur-sm">
             <!-- Card Header -->
-            <header class="p-6 pb-4 text-center space-y-2">
-                <h1 id="title-login" class="text-2xl font-bold bg-gradient-to-r from-rose-900 from-50% to-rose-950  bg-clip-text text-transparent">
-                    Controle-estoque
-                </h1>
+            <header class="pl-4 pr-4 pb-4 text-center space-y-2">
+                <div class="flex justify-center">
+                    <img src="../../Logo_principal.png" alt="" class="max-w-30">
+                </div>
                 <p id="phrase-login" class="text-base text-gray-600">
                     Somente pessoas autorizadas podem entrar
                 </p>
@@ -15,25 +15,6 @@
             <!-- Card Content -->
             <section class="p-6 pt-2">
                 <form id="loginForm" class="space-y-5">
-                    <div id="div-userName" class="hidden space-y-2">
-                        <label for="email" class="block text-sm font-medium text-gray-900">
-                            Nome
-                        </label>
-                        <div class="relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400">
-                                <circle cx="12" cy="8" r="5"/>
-                                <path d="M20 21a8 8 0 0 0-16 0"/>
-                            </svg>
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                placeholder="Second Mind"
-                                class="w-full pl-10 h-11 px-3 py-2 border border-gray-300 rounded-lg bg-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
-                                required
-                            />
-                        </div>
-                    </div>
                     <!-- Email Field -->
                     <div class="space-y-2">
                         <label for="email" class="block text-sm font-medium text-gray-900">

@@ -17,11 +17,11 @@ export function handleSelect(){
     ) => {
         onValue(databaseRef, (snapshot) => {
             const data = snapshot.val();
+
             selectElement.innerHTML = `<option value="">Selecione...</option>`;
             console.log(data);
             
             if(!data || !data[dataKey] || data[dataKey].length === 0){
-                console.log("Entrou aqui");
                 selectElement.innerHTML = `
                     <option value="">Selecione...</option>
                     <option disabled>Nenhum produto</option>
@@ -31,24 +31,24 @@ export function handleSelect(){
 
             const items = Object.values(data[dataKey]);
             console.log(items);
+
+            const itemsDisponiveis = items.filter(item => item.quantidade > 0);
+
+            if(itemsDisponiveis.length === 0){
+                 selectElement.innerHTML = `
+                    <option value="">Selecione...</option>
+                    <option disabled>Nenhum produto</option>
+                `;
+                return;
+            }
         
-            items.forEach(item => {
-                if(item.quantidade > 0){
-                    const option = document.createElement("option");
-                    option.value = item[itemLabelKey];
-                    option.textContent = item[itemLabelKey];
-                    selectElement.appendChild(option);
-                }
-                else{
-                    console.log("Entrou aqui");
-                    selectElement.innerHTML = `
-                        <option value="">Selecione...</option>
-                        <option disabled>Nenhum produto</option>
-                    `;
-                    return; 
-                }
+            itemsDisponiveis.forEach(item => {
+                const option = document.createElement("option");
+                option.value = item[itemLabelKey];
+                option.textContent = item[itemLabelKey];
+                selectElement.appendChild(option);
             });
-        })
+        });
     };
 
     queryDatabaseCurrentProducts(

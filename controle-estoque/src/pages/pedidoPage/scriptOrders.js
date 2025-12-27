@@ -98,7 +98,6 @@ export function pedido(){
     }
 
     const ordersRef = ref(db, "orders");
-    off(ordersRef);
     onValue(ordersRef, (snapshot) => {
         renderOrders(snapshot);
     });

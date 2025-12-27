@@ -7,93 +7,91 @@ export function loadCurrentEstoque(displayCurrentMassa, displayCurrentRecheio){
     const recheioEstoqueRef = ref(db, "recheio");
     const ordersRef = ref(db, "orders");
 
-    onValue(ordersRef, (snapshot) => {
-        const dataOrders = snapshot.val();
+    let massa = [];
+    let recheio = [];
+    let orders = [];
+
+    function renderDatas(){
+        if(!massa || !recheio || !orders){
+            showToastify("Sem produtos para mostrar"); 
+            return;
+        }
+
+        const countMassas = {};
+        const countRecheios = {};
+
+        orders.forEach(p => {
+            countMassas[p.massa1] = (countMassas[p.massa1] || 0) + 1;
+            countMassas[p.massa2] = (countMassas[p.massa2] || 0) + 1;
+
+            countRecheios[p.recheio1] = (countRecheios[p.recheio1] || 0) + 1;
+            countRecheios[p.recheio2] = (countRecheios[p.recheio2] || 0) + 1;
+        });
+
+        displayCurrentMassa.innerHTML = "";
+        displayCurrentRecheio.innerHTML = "";
+
         const currentMassaEstoque = [];
         const currentRecheioEstoque = [];
 
-        const orders = dataOrders ? Object.values(dataOrders) : [];
+        massa.forEach(massa => {
+            const usedOrder = countMassas[massa.massa] || 0;
+            const qtdAtual = Math.max(Number(massa.quantidade) - usedOrder, 0);
 
-        const allMassasOrder = orders.flatMap(p => [p.massa1, p.massa2]);
-        const countMassas = {};
-        allMassasOrder.forEach(nome => {
-            countMassas[nome] = (countMassas[nome] || 0) + 1;
+            currentMassaEstoque.push({ massa: massa.massa, quantidade: qtdAtual });
+
+            displayCurrentMassa.innerHTML += `
+                <p class="border-b-1 pl-2">${massa.massa}</p>
+                <p class="border-b-1">${qtdAtual}</p>
+            `;
         });
 
-        const allRecheiosOrder = orders.flatMap(p => [p.recheio1, p.recheio2]);
-        const countRecheios = {};
-        allRecheiosOrder.forEach(nome => {
-            countRecheios[nome] = (countRecheios[nome] || 0) + 1;
-        });
- 
-        displayCurrentMassa.innerHTML = "";
-        onValue(massaEstoqueRef, (snapshot) => {
-            const data = snapshot.val();
-            const massaEstoque = [];
-            
-            if(!data){ 
-                showToastify("Não contem massa no estoque atual");
-                return; 
-            }
+        recheio.forEach(recheio => {
+            const usedOrder = countRecheios[recheio.recheio] || 0;
+            const qtdAtual = Math.max(Number(recheio.quantidade) - usedOrder, 0);
 
+            currentRecheioEstoque.push({ recheio: recheio.recheio, quantidade: qtdAtual });
+
+            displayCurrentRecheio.innerHTML += `
+                <p class="border-b-1 pl-2">${recheio.recheio}</p>
+                <p class="border-b-1">${qtdAtual}</p>
+            `;
+        });
+
+        set(ref(db, "dbCurrentMassa"), { currentMassaEstoque });
+        set(ref(db, "dbCurrentRecheio"), { currentRecheioEstoque });
+    }
+
+    onValue(massaEstoqueRef, (snapshot) => {
+        const data = snapshot.val();
+        massa = [];
+
+        if(data){
             Object.values(data).forEach(el => {
-                if (el.listMassas && Array.isArray(el.listMassas)) {
-                    massaEstoque.push(...el.listMassas);
-                }
+                if(el.listMassas) massa.push(...el.listMassas);
             });
+        }
 
-            massaEstoque.forEach(massa => {
-                const qtdPedidos = countMassas[massa.massa] || 0;
-                const qtdAtual = Math.max(parseInt(massa.quantidade) - qtdPedidos, 0);
+        renderDatas();
+    });
 
-                currentMassaEstoque.push({ 
-                    massa: massa.massa, 
-                    quantidade: qtdAtual 
-                });
+    onValue(recheioEstoqueRef, (snapshot) => {
+        const data = snapshot.val();
+        recheio = [];
 
-                displayCurrentMassa.innerHTML += `
-                    <p class="border-b-1 pl-2">${massa.massa}</p>
-                    <p class="border-b-1">${qtdAtual}</p>
-                `;
+        if (data) {
+            Object.values(data).forEach(el => {
+                if(el.listRecheios) recheio.push(...el.listRecheios);
             });
+        }
 
-            const dbCurrentMassa = ref(db, "dbCurrentMassa");
-            set(dbCurrentMassa, { currentMassaEstoque });
-        });
+        renderDatas();
+    });
+
+    onValue(ordersRef, (snapshot) => {
+        const data = snapshot.val();
+        orders = data ? Object.values(data) : [];
         
-        displayCurrentRecheio.innerHTML = "";
-        onValue(recheioEstoqueRef, (snapshot) => {
-            const data = snapshot.val();
-            const recheioEstoque = [];
-
-            if(!data){ 
-                showToastify("Não contem recheio no estoque atual");
-                return; 
-            }
-
-            Object.values(data).forEach(el => {
-                if (el.listRecheios && Array.isArray(el.listRecheios)) {
-                    recheioEstoque.push(...el.listRecheios);
-                }
-            });
-
-            recheioEstoque.forEach(recheio => {
-                const qtdPedidos = countRecheios[recheio.recheio] || 0;
-                const qtdAtual = Math.max(parseInt(recheio.quantidade) - qtdPedidos, 0);
-
-                currentRecheioEstoque.push({ 
-                    recheio: recheio.recheio, 
-                    quantidade: qtdAtual 
-                });
-
-                displayCurrentRecheio.innerHTML += `
-                    <p class="border-b-1 pl-2">${recheio.recheio}</p>
-                    <p class="border-b-1">${qtdAtual}</p>
-                `;
-            });
-
-            const dbCurrentRecheio = ref(db, "dbCurrentRecheio");
-            set(dbCurrentRecheio, { currentRecheioEstoque });
-        });
+        renderDatas();
     });
 }

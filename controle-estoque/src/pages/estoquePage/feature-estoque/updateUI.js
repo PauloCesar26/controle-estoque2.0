@@ -119,5 +119,5 @@ export function updateUI(){
         btnUpdateEstoque.classList.remove("hidden");
         estoque.classList.remove("hidden");
         loadingOverlay.hide();
-    }, 900);
+    }, 700);
 }
