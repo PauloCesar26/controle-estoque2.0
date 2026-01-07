@@ -3,6 +3,9 @@
 *{
     font-family: "Inter", sans-serif;
 }
+svg{
+  pointer-events: none;
+}
 body{
     min-width: 200px;
     max-width: 2000px;
